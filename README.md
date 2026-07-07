@@ -4,6 +4,9 @@ A small pipeline that turns the DHIS2-style CSV exports into a quarterly bulleti
 It reads the raw data, computes a few facility metrics with Danfo.js, and renders
 them as charts in a plain HTML page.
 
+## Project
+https://github.com/kerry-okpere/SandTech
+
 ## Setup
 You'll need Node (v18+). Then:
 For setting up environment:
@@ -44,3 +47,6 @@ index.js           runs the metrics and writes bulletin.json
 bulletin.html      the dashboard (fetches bulletin.json)
 ```
 
+## Project
+
+https://github.com/kerry-okpere/SandTech
