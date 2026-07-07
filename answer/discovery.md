@@ -1,146 +1,139 @@
-# Problem Decompositions 
+# Problem Decompositions
 
 **The Problem A**
 
 The Ministry of Health wants to make data-driven decisions, but lacks a unifying layer that makes the data visible, comparable, and actionable, undermining effective and timely decision-making.
 
 **Who you would talk to in Week 1 and what you would ask**
-My first approach will be to conduct a diagnosis to understand what makes the data messy, given that the ministry of Health is in charge of this layer, here are the questions I would ask the director;
-Key personal: Director, MOH Data Team and M&E Officers
-- How does data get into the DHIS2 for export ?
-- Are there facilities that never send in their report ?
-- On average how long does it take to recieve report from the facilities ?
-- Which of the 3 (clinic, hospital, rural facility) take the longest in sending their data ?
-- Which of the 3 (clinic, hospital, rural facility) do you spend more time refining and cleaning ? 
-- What corrections happen after data collection ?
-- What part of the compilation process takes the longest time ? What part is manual ?
+My first approach will be to conduct a diagnosis to understand what makes the data messy. Given that the Ministry of Health is in charge of this layer, here are the questions I would ask the director:
+Key personnel: Director, MoH Data Team, and M&E Officers
+- How does data get into the DHIS2 for export?
+- Are there facilities that never send in their report?
+- On average, how long does it take to receive reports from the facilities?
+- Which of the 3 (clinic, hospital, rural facility) takes the longest to send their data?
+- Which of the 3 (clinic, hospital, rural facility) do you spend more time refining and cleaning?
+- What corrections happen after data collection?
+- What part of the compilation process takes the longest time? What part is manual?
 
 **Direct Observation**
-- I would ask the MoH, team to walk me through the process of DHIS2 export to excel, the pre-processing measures they take including data cleaning, data augmenting, data normalization and addition process
-- I would watch for their bulletin generation process, are bulletins created every time or are there templates, WHat part can be automated now and what process or workflow need and overhaul or a new system, these questions would be answered by observation.
-- I would understand the computations that go into the calculating top facility, maternal health indicators and trend analysis.
-- I would like to walk backward from the last bulletin to confirm how is data exported from the DHIS2 and prepared, to make up the bulletin, this includes, the conversation had, the bottlenecks in the process, and the tools currently used. This helps me know first hand what the workflow is and where the gaps lie. 
-- I would like to understand what information makes it into the bulletin 
+- I would ask the MoH team to walk me through the process of DHIS2 export to Excel, and the pre-processing measures they take, including data cleaning, augmentation, normalisation, and addition.
+- I would watch their bulletin generation process: are bulletins created from scratch every time, or are there templates? What part can be automated now, and what process or workflow needs an overhaul or a new system? These questions would be answered by observation.
+- I would understand the computations that go into calculating top facilities, maternal health indicators, and trend analysis.
+- I would like to walk backwards from the last bulletin to confirm how data is exported from DHIS2 and prepared to make up the bulletin. This includes the conversations had, the bottlenecks in the process, and the tools currently used. This helps me know first-hand what the workflow is and where the gaps lie.
+- I would like to understand what information makes it into the bulletin.
 
-**Assumptions for what MOH data mess**
-- inconsistent submission may likely be due to power, or spotty internet or the manual requirement of handling paper based report.
-- Data is a mess because some facilities may be inconsistent with their submission. 
+**Assumptions about the MoH data mess**
+- Inconsistent submission may be due to power, spotty internet, or the manual requirement of handling paper-based reports.
+- Data is a mess because some facilities may be inconsistent with their submissions.
 
 **Patterns I See:**
 - Data fragmentation: Data is scattered across multiple sources (DHIS2, CommCare, OpenMRS, and the Health Tracker EMR).
-- Data is incomplete/unorganized: given that up to 175 facilities are not fully digitized. Data will remain uncaptured in the bulletin and dashboards, worsened by unreliable power. Some facilities may not be submitting their reports give
-- Data is inconsistency: given that data may be gotten from buggy EMR, data may be duplicated, contain inaccurate (eg Male is pregnant), inconsistent schema (across multiple versions of the EMR the shape of the data schema can change), or may have missing values(incorrect, duplicated, and in inaccurate formats generated by a buggy EMR).
-- Data is slow to access: Data is stale, given that some facilities are without power or my experience spotty internet, this will delay data transfer, and for paper based facilities data would remain captured but untransmitted until physically disclose which takes time and may be delayed.
-- Data compilation is manual and not automated so data cleaning and preparation may likely be taking the bulk of the time from the MoH
+- Data is incomplete/unorganised: given that up to 175 facilities are not fully digitised, data will remain uncaptured in the bulletin and dashboards, worsened by unreliable power. Some facilities may not be submitting their reports.
+- Data is inconsistent: given that data may come from a buggy EMR, it may be duplicated, contain inaccurate entries (e.g., 'Male is pregnant'), use an inconsistent schema (across multiple versions of the EMR, the shape of the data schema can change), or have missing values (incorrect, duplicated, or inaccurate formats generated by a buggy EMR).
+- Data is slow to access: data is stale, given that some facilities are without power or may experience spotty internet, which will delay data transfer. For paper-based facilities, data would remain captured but untransmitted until physically delivered, which takes time and may be delayed.
+- Data compilation is manual and not automated, so data cleaning and preparation may be taking the bulk of the MoH's time.
 
 The Ministry needs a full-coverage health information system that aggregates data from these different sources for processing and analysis, including report generation on the top-performing facilities by month with comparison against the previous month.
 
 
 
 
+**The Problem B**
+A District Health Officer sits between the facilities and the national MoH. They act as the operational manager for all health facilities in one district.
 
-**The ProblemB**
-A District Health Officer sits between the facilities and the national MoH. They act as the  operational manager for all health facilities in one district.
-
-Their core responsibilities my include:
+Their core responsibilities may include:
 Resource allocation: where do drugs, staff, supplies go this week
 Supervision: are facilities operational, staffed, functioning
 Outbreak response: spot a disease cluster early, mobilize a response
 Stock management: catch stockouts before a facility runs dry
 Reporting upward: roll district numbers up to the national level
 
-The District Health Officer (DHO) cannot manage the district effectively if the information is stale. Learning about operational and time-sensitive issues like stockout or outbreak after 3 weeks can directly cause harm to patient or increase a communities risk of exposure to an outbreak.
+The District Health Officer (DHO) cannot manage the district effectively if the information is stale. Learning about operational and time-sensitive issues like a stockout or outbreak after 3 weeks can directly cause harm to patients or increase a community's risk of exposure to an outbreak.
 
 **Who you would talk to in Week 1 and what you would ask**
-No real-time system for report/data dissemination from facility to district officer 
-Questions to as the DHO:
-- How do Clinics and Hospitals send data to DHIS2? is it automated or does it require manual preparation?
-- Do you find that you experience delay from Clinics and Hospitals due to connectivity and power supply ?
-- How do you digitized the rural facility data, do you have to conduct manual data entry ?
-- How are data delivered from rural facilities, are they physical?
-- What is the average time it take to receive data from rural and digitized facilities ?
+There is no real-time system for report/data dissemination from facility to the district officer.
+Questions to ask the DHO:
+- How do Clinics and Hospitals send data to DHIS2? Is it automated, or does it require manual preparation?
+- Do you find that you experience delay from Clinics and Hospitals due to connectivity and power supply?
+- How do you digitise the rural facility data? Do you have to conduct manual data entry?
+- How are data delivered from rural facilities? Are they physical?
+- What is the average time it takes to receive data from rural and digitised facilities?
 - At what point between the facility and DHIS2 is most of the reporting delay introduced?
-- Which of the 3 types of facilities do you find has the most challenge with data remission?
-- Are there facilities that delivery reports physically ?
+- Which of the 3 types of facilities do you find have the most challenge with data submission?
+- Are there facilities that deliver reports physically?
 
 **Assumptions**
-- For rural reporting that require physical delivery, data collation might be handled on a given day of the month because of the physical requirement so for a facility will make sense for them to collate the data and send it off in one day. 
+- For rural reporting that requires physical delivery, data collation might be handled on a given day of the month. Because of the physical requirement, it makes sense for a facility to collate the data and send it off in one day.
 
 **Patterns I See:**
-- Power and connectivity: For digitized hospitals and clinics, they may still face some level of delay in reporting to the DHOs given that connection and power are required to transmit data.
-- Collection problems:  Facilities who are managed on paper may require physical means to report status, either the DHO needs to visit each facility or the facility manager needs to physically report to the DHO. Give that the facilities are up to 174, the physical constraint may be a large contributor to slow or stale data.
-- Integration problems: If integration pipelines for sharing data from clinics and hospital are not fully established, data transfer could be delayed due to lack of a clear path for data dissemination DHO
-- Manual data entry: for paper based facilities the DHO team may be required to conduct manual entry of the data which takes time and require human hours.
+- Power and connectivity: For digitised hospitals and clinics, they may still face some level of delay in reporting to the DHOs, given that connection and power are required to transmit data.
+- Collection problems: Facilities that are managed on paper may require physical means to report status: either the DHO visits each facility, or the facility manager physically reports to the DHO. Given that there are up to 175 facilities, the physical constraint may be a large contributor to slow or stale data.
+- Integration problems: If integration pipelines for sharing data from clinics and hospitals are not fully established, data transfer could be delayed due to the lack of a clear path for data dissemination to the DHO.
+- Manual data entry: for paper-based facilities, the DHO team may be required to conduct manual entry of the data, which takes time and requires human hours.
 
 
 
 
+**The Problem C**
+The HIV and TB programmes are managed on CommCare, but we can't identify patients with HIV/TB co-infections.
 
-**The ProblemC**
-The HIV and TB programs are managed on CommCare, but we can't identify patients with HIV/TB co-infections.
-
-**Who you would talk to in Week 1 and what you would ask** 
-- How do the HIV and TB programs identify the same patient ?
+**Who you would talk to in Week 1 and what you would ask**
+- How do the HIV and TB programmes identify the same patient?
 - Are HIV and TB recorded in the same CommCare application or in separate applications/projects?
-- If the data is already collected and exists in independent programs, what prevents linking it today?
-- Walk me through how a patient who has both HIV and TB is represented across the two programs today?
+- If the data is already collected and exists in independent programmes, what prevents linking it today?
+- Walk me through how a patient who has both HIV and TB is represented across the two programmes today?
 
 **Patterns I See:**
-- HIV and TB program may be deployed on separate CommCare applications, with 2 different forms and database.
-- Same patient with different Identification number across program.
+- The HIV and TB programmes may be deployed on separate CommCare applications, with two different forms and databases.
+- The same patient with different identification numbers across programmes.
 
 
 **Assumptions about the SandTech product suite**
 - HOS Data Model: a transformation engine that maps incoming data to a canonical model and applies validation logic before storing it or passing it on for analytics and AI. I also assume it has an ingestion layer that lets it process data from multiple sources.
 - Health Atlas: supports location-based decision-making and can be used for disease surveillance, such as tuberculosis and HIV intervention, as well as immunization surveillance.
-- HealthInsight Engine (AI analytics): sits on top of the HOS Data Model and handles forecasting, prediction, and summarizing findings for the Ministry.
+- HealthInsight Engine (AI analytics): sits on top of the HOS Data Model and handles forecasting, prediction, and summarising findings for the Ministry.
 - Outcome Tracker: likely provides outcome analytics and probably supports reporting or exporting them. I also assume it provides the metrics used in report generation, such as quarterly bulletins.
-- Apache Superset (analytics templates toolkit): sits on top of the data from the HOS Data Model and provides templates to visualize analytics and generate bulletins and reports. Example templates include a monthly bulletin layout, a maternal health dashboard, a quarterly PDF report, and a facility performance dashboard.
-
+- Apache Superset (analytics templates toolkit): sits on top of the data from the HOS Data Model and provides templates to visualise analytics and generate bulletins and reports. Example templates include a monthly bulletin layout, a maternal health dashboard, a quarterly PDF report, and a facility performance dashboard.
 
 
 
 
 # Problem Selection
-I would choose Problem A because it has the clearest structure, and the most available information; known data sources, an existing workflow to observe and standard output. Given that the  Ministry already produces the bulletin manually, the team would not be building from scratch but would be identifying gaps to closes and workflows to automate.
+I would choose Problem A because it has the clearest structure and the most available information: known data sources, an existing workflow to observe, and a standard output. Given that the Ministry already produces the bulletin manually, the team would not be building from scratch but would be identifying gaps to close and workflows to automate.
 
 **Concrete Reasons:**
 - Major pain point directly affecting the MoH decision-making.
-- The data source is known: DHIS2 Excel exports. 
+- The data source is known: DHIS2 Excel exports.
 - The workflow is directly observable and can be automated.
 - The metrics for the Bulletin are clearly defined.
 
-The sprint would focus on 
-exposes data quality issues
-expose the workflow gaps
-generates a usable output templates 
-turning that manual process into a repeatable automation, 
+The sprint would focus on exposing data quality issues, exposing workflow gaps, generating usable output templates, and turning that manual process into a repeatable automation.
 
-This is the quickest way to gain trust from the MoH and gain momentum in results, The lessons learned can also be reusable information for later work within the district office and facilities.
+This is the quickest way to gain trust from the MoH and gain momentum in results. The lessons learned can also be reusable information for later work within the district office and facilities.
 
 **Compared to Problems B and C:**
-- Both problems may require direct facility observation which takes time to access physically.
-- In Problem B the workflow can vary across facilities, creating values across multiple facilities might require new tooling or close observation and incremental solution deployment. This takes time. 
+- Both problems may require direct facility observation, which takes time to access physically.
+- In Problem B, the workflow can vary across facilities. Creating value across multiple facilities might require new tooling, or close observation and incremental solution deployment. This takes time.
 - In Problem B, "Real-time" facility status depends on connectivity, power, reporting workflows, and source system reliability. Rural facilities are paper-only, which limits real-time visibility.
-- Problem B would require a new system for digitizing rural facility which is usually accompanied by training of hospital staff this might take more than 6 weeks to deploy and train
-- Problem C require patient matching privacy controls, facility ownership, and cross-program coordination. I would defer it because it requires solutions are deployed on the facility level, given the scale of the number of facilities, it would also require longer time.
+- Problem B would require a new system for digitising rural facilities, which is usually accompanied by training of hospital staff. This might take more than 6 weeks to deploy and train.
+- Problem C requires patient matching, privacy controls, facility ownership, and cross-programme coordination. I would defer it because it requires solutions to be deployed at the facility level; given the number of facilities, it would also require more time.
 
 **Specific Measurable Outcome**
 By the end of 6 weeks:
 - Ingests the current DHIS2 export format.
 - Calculates at least the core bulletin metrics: top facilities by volume, maternal health indicators, facility performance, and quarter-over-quarter trends.
-- Produces a usable bulletin output, such as HTML report.
-- Reduces manual compilation effort and cut down hours in bulletin preparation
+- Produces a usable bulletin output, such as an HTML report.
+- Reduces manual compilation effort and cuts down hours in bulletin preparation.
 
 **Out Of Scope For The First Sprint**
 - Replacing DHIS2, HealthTrack, OpenMRS, CommCare, or any existing source system.
-- Digitizing the 175 paper-only rural facilities.
+- Digitising the 175 paper-only rural facilities.
 - Building real-time facility monitoring for all districts.
 
 
 **Week 2 Validation List**
-- Validate the core functionality of each Sand technologies module
-    - Can the Analytics Template Toolkit generate bulletin layouts ?
-    - Does the Outcome Tracker already calculate indicators and KPI metrics
+- Validate the core functionality of each Sand Technologies module
+    - Can the Analytics Template Toolkit generate bulletin layouts?
+    - Does the Outcome Tracker already calculate indicators and KPI metrics?
     - What transformations does the HealthOS Data Model perform?
-- I would review previous bulletin to understand the expectation  
+- I would review the previous bulletin to understand the expectation.
