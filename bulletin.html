@@ -1,0 +1,41 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Neonatal Bulletin</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+<style>
+  body { font-family: sans-serif; max-width: 800px; margin: 40px auto; padding: 0 16px; }
+</style>
+
+<h1>Neonatal Bulletin 2024</h1>
+
+<h2>Top 10 facilities by deliveries</h2>
+<canvas id="deliveries"></canvas>
+
+<h2>Highest neonatal mortality</h2>
+<canvas id="mortality"></canvas>
+
+<h2>Reporting completeness vs readiness</h2>
+<canvas id="performance"></canvas>
+
+<h2>Quarterly mortality trend</h2>
+<canvas id="trend"></canvas>
+
+<script>
+const chart = (id, type, labels, datasets, options) =>
+  new Chart(document.getElementById(id), { type, data: { labels, datasets }, options });
+
+(async () => {
+  const d = await (await fetch("bulletin.json")).json();
+
+  chart("deliveries", "bar", d.deliveries.map((x) => x.name), [{ label: "Deliveries", data: d.deliveries.map((x) => x.value) }], { indexAxis: "y" });
+
+  chart("mortality", "bar", d.mortality.map((x) => x.name), [{ label: "Mortality / 1,000", data: d.mortality.map((x) => x.value) }], { indexAxis: "y" });
+
+  chart("performance", "bar", d.performance.map((x) => x.name), [
+    { label: "Completeness", data: d.performance.map((x) => x.completeness) },
+    { label: "Readiness", data: d.performance.map((x) => x.readiness) },
+  ]);
+
+  chart("trend", "line", d.trend.map((x) => x.quarter), [{ label: "Mortality / 1,000", data: d.trend.map((x) => x.value) }]);
+})();
+</script>

@@ -132,7 +132,15 @@ By the end of 6 weeks:
 - Produces a usable bulletin output, such as HTML report.
 - Reduces manual compilation effort and cut down hours in bulletin preparation
 
-## Out Of Scope For The First Sprint
+**Out Of Scope For The First Sprint**
 - Replacing DHIS2, HealthTrack, OpenMRS, CommCare, or any existing source system.
 - Digitizing the 175 paper-only rural facilities.
 - Building real-time facility monitoring for all districts.
+
+
+**Week 2 Validation List**
+- Validate the core functionality of each Sand technologies module
+    - Can the Analytics Template Toolkit generate bulletin layouts ?
+    - Does the Outcome Tracker already calculate indicators and KPI metrics
+    - What transformations does the HealthOS Data Model perform?
+- I would review previous bulletin to understand the expectation  

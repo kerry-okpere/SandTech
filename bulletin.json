@@ -1,0 +1,156 @@
+{
+  "deliveries": [
+    {
+      "name": "Nyarugenge Health Center 3",
+      "value": 6025
+    },
+    {
+      "name": "Kicukiro Health Center 2",
+      "value": 5904
+    },
+    {
+      "name": "Gatsibo Health Center 2",
+      "value": 3559
+    },
+    {
+      "name": "Gasabo Health Center 1",
+      "value": 3480
+    },
+    {
+      "name": "Nyagatare Health Center 2",
+      "value": 3451
+    },
+    {
+      "name": "Nyamasheke Health Center 1",
+      "value": 3449
+    },
+    {
+      "name": "Nyabihu Health Center 4",
+      "value": 3394
+    },
+    {
+      "name": "Karongi Health Center 3",
+      "value": 3389
+    },
+    {
+      "name": "Huye Health Center 1",
+      "value": 3367
+    },
+    {
+      "name": "Rwamagana Health Center 2",
+      "value": 3350
+    }
+  ],
+  "mortality": [
+    {
+      "name": "Ruhango Health Center 1",
+      "value": 72.3
+    },
+    {
+      "name": "Bugesera Health Center 1",
+      "value": 71.8
+    },
+    {
+      "name": "Gakenke Health Center 2",
+      "value": 71.7
+    },
+    {
+      "name": "Gicumbi Health Center 2",
+      "value": 71.2
+    },
+    {
+      "name": "Kicukiro Health Center 1",
+      "value": 71
+    },
+    {
+      "name": "Gisagara Health Center 4",
+      "value": 70.4
+    },
+    {
+      "name": "Huye Hospital",
+      "value": 70.2
+    },
+    {
+      "name": "Gasabo Hospital",
+      "value": 70
+    },
+    {
+      "name": "Rutsiro Health Center 2",
+      "value": 69.7
+    },
+    {
+      "name": "Gatsibo Health Center 3",
+      "value": 69.6
+    }
+  ],
+  "performance": [
+    {
+      "name": "Kicukiro Health Center 2",
+      "completeness": 99,
+      "readiness": 93
+    },
+    {
+      "name": "Nyarugenge Health Center 3",
+      "completeness": 96,
+      "readiness": 81.2
+    },
+    {
+      "name": "Kicukiro Hospital",
+      "completeness": 84,
+      "readiness": 75.8
+    },
+    {
+      "name": "Rutsiro Health Center 4",
+      "completeness": 76,
+      "readiness": 74.7
+    },
+    {
+      "name": "Nyarugenge Health Center 2",
+      "completeness": 92,
+      "readiness": 73.3
+    },
+    {
+      "name": "Nyaruguru Hospital",
+      "completeness": 92,
+      "readiness": 71.2
+    },
+    {
+      "name": "Nyarugenge Hospital",
+      "completeness": 89,
+      "readiness": 68.5
+    },
+    {
+      "name": "Karongi Health Center 1",
+      "completeness": 78,
+      "readiness": 67.7
+    },
+    {
+      "name": "Musanze Health Center 1",
+      "completeness": 86,
+      "readiness": 66.7
+    },
+    {
+      "name": "Gasabo Health Center 1",
+      "completeness": 83,
+      "readiness": 65.6
+    }
+  ],
+  "trend": [
+    {
+      "quarter": "2024Q1",
+      "value": 50.3
+    },
+    {
+      "quarter": "2024Q2",
+      "value": 50.3
+    },
+    {
+      "quarter": "2024Q3",
+      "value": 50.8
+    },
+    {
+      "quarter": "2024Q4",
+      "value": 49.9
+    }
+  ]
+}
